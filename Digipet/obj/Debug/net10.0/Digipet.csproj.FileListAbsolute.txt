@@ -1,0 +1,14 @@
+C:\Users\temp\RiderProjects\Digipet\Digipet\bin\Debug\net10.0\Digipet.exe
+C:\Users\temp\RiderProjects\Digipet\Digipet\bin\Debug\net10.0\Digipet.deps.json
+C:\Users\temp\RiderProjects\Digipet\Digipet\bin\Debug\net10.0\Digipet.runtimeconfig.json
+C:\Users\temp\RiderProjects\Digipet\Digipet\bin\Debug\net10.0\Digipet.dll
+C:\Users\temp\RiderProjects\Digipet\Digipet\bin\Debug\net10.0\Digipet.pdb
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.AssemblyInfoInputs.cache
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.AssemblyInfo.cs
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.csproj.CoreCompileInputs.cache
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.dll
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\refint\Digipet.dll
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.pdb
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\Digipet.genruntimeconfig.cache
+C:\Users\temp\RiderProjects\Digipet\Digipet\obj\Debug\net10.0\ref\Digipet.dll
