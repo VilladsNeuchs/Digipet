@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Digipet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1ed207e32f8f376f9f406ec14519bf8fd741490")]
 [assembly: System.Reflection.AssemblyProductAttribute("Digipet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Digipet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
