@@ -11,10 +11,12 @@ class Program
         pet.SSpeed();
         pet.GiveStats();
 
-        Enemy enemy = new Enemy();
+        Enemy enemy = new Enemy(pet);
         enemy.SAttack();
         enemy.SHealth();
         enemy.SSpeed();
         enemy.MakeEnemyType();
+        Combat combat = new Combat();
+        combat.InCombat(pet, enemy);
     }
 }

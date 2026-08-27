@@ -2,17 +2,18 @@
 
 public class Pet : IStats
 {
-    string PetName;
-    public static int HP;
-    public static int ATK;
-    public static int SPE;
-    public static int CobatHP = HP; //temp HP for combat
-
-    public static int PlusStat;
+    public string PetName;
+    public  int HP;
+    public  int ATK;
+    public  int SPE;
+    public int Statpol = 20;
+    public  int PlusStat;
+    public int CobatHP; //temp HP for combat
 
     public void SHealth()
     {
         HP = 1;
+        CobatHP = HP;
     }
 
     public void SAttack()
@@ -28,9 +29,9 @@ public class Pet : IStats
 
     public void GiveName()
     {
-        string PetName = "";
+        PetName= "";
 
-        for (int i = 1; i < 10; i++)
+        for ( int i = 1; i < 10; i++)
         {
             Console.Clear();
             Console.WriteLine("give your pet a name");
@@ -57,15 +58,23 @@ public class Pet : IStats
         }
     }
 
-
+    public void Levelup()
+    {
+        Statpol = 20;
+        if (Statpol == 20)
+        {
+            GiveStats();
+        }
+    }
+                  
     public void GiveStats()
     {
-        while (LevelUp.Statpol >= 0)
+        while (Statpol >= 0)
         {
             int SelectedStat = 0;
             for (int i = 1; i < 10; i++)
             {
-                Console.WriteLine("you have " + LevelUp.Statpol + " Stat points and get 20 more per Level Up");
+                Console.WriteLine("you have " + Statpol + " Stat points and get 20 more per Level Up");
                 Console.WriteLine("what stat do you want to increase ");
                 Console.WriteLine("1.Health " + HP);
                 Console.WriteLine("2.Speed " + SPE);
@@ -92,10 +101,16 @@ public class Pet : IStats
             {
                 if (SelectedStat == 1)
                 {
-                    Console.WriteLine("how meni points do you want to use on HP numbers onli op to " + LevelUp.Statpol);
+                    Console.WriteLine("how meni points do you want to use on HP numbers onli op to " + Statpol);
                     int.TryParse(Console.ReadLine(), out PlusStat);
+                    while (PlusStat > Statpol)
+                    {
+                       Console.WriteLine("you dont have that meni stat points you have " + Statpol); 
+                       int.TryParse(Console.ReadLine(), out PlusStat);
+                    }
+
                     HP += PlusStat;
-                    LevelUp.Statpol -= PlusStat;
+                    Statpol -= PlusStat;
                     Console.Clear();
 
                     Console.WriteLine("1.Health " + HP);
@@ -106,10 +121,15 @@ public class Pet : IStats
                 }
                 else if (SelectedStat == 2)
                 {
-                    Console.WriteLine("how meni points do you want to use on SPE numbers onli op to " + LevelUp.Statpol);
+                    Console.WriteLine("how meni points do you want to use on SPE numbers onli op to " + Statpol);
                     int.TryParse(Console.ReadLine(), out PlusStat);
+                    while (PlusStat > Statpol)
+                    {
+                        Console.WriteLine("you dont have that meni stat points you have " + Statpol); 
+                        int.TryParse(Console.ReadLine(), out PlusStat);
+                    }
                     SPE += PlusStat;
-                    LevelUp.Statpol -= PlusStat;
+                    Statpol -= PlusStat;
                     Console.Clear();
                     Console.WriteLine("1.Health " + HP);
                     Console.WriteLine("2.Speed " + SPE);
@@ -119,11 +139,17 @@ public class Pet : IStats
                 }
                 else if (SelectedStat == 3)
                 {
-                    Console.WriteLine("how meni points do you want to use on ATK numbers onli op to " + LevelUp.Statpol);
+                    Console.WriteLine("how meni points do you want to use on ATK numbers onli op to " +Statpol);
                     int.TryParse(Console.ReadLine(), out PlusStat);
+                    while (PlusStat > Statpol)
+                    {
+                        Console.WriteLine("you dont have that meni stat points you have " + Statpol); 
+                        int.TryParse(Console.ReadLine(), out PlusStat);
+                    }
                     ATK += PlusStat;
-                    LevelUp.Statpol -= PlusStat;
+                    Statpol -= PlusStat;
                     Console.Clear();
+                    Console.WriteLine(PetName);
                     Console.WriteLine("1.Health " + HP);
                     Console.WriteLine("2.Speed " + SPE);
                     Console.WriteLine("3.Attack " + ATK);
@@ -131,7 +157,7 @@ public class Pet : IStats
                     Console.ReadKey();
                 }
 
-                if (LevelUp.Statpol <= 0)
+                if (Statpol <= 0)
                 {
                     break;
                 }

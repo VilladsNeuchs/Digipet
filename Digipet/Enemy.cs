@@ -2,18 +2,19 @@
 
 namespace Digipet;
 
-public class Enemy : IStats
+public class Enemy(Pet pet) : IStats
 {
-    string EnemyName;
-    public static int EHP;
-    public static int EATK;
-    public static int ESPE;
-    public static int EnemyType;
-    public static int CobatEHP = EHP;
+    public string EnemyName;
+    public  int EHP;
+    public  int EATK;
+    public  int ESPE;
+    public  int EnemyType;
+    public int CobatEHP;
 
     public void SHealth()
     {
         EHP = 0;
+        CobatEHP = EHP;
     }
 
     public void SAttack()
@@ -34,49 +35,49 @@ public class Enemy : IStats
     {
         case 1:
             EnemyName = "true mimic ";
-            EHP += Pet.HP;
-            ESPE += Pet.SPE;
-            EATK += Pet.ATK; 
+            EHP += pet.HP;
+            ESPE += pet.SPE;
+            EATK += pet.ATK; 
 
             break;
         
         case 2:
             EnemyName = "incomplete mimic ";
-            EHP += Pet.HP;
-            ESPE += Pet.ATK;
-            EATK += Pet.SPE; 
+            EHP +=  pet.HP;
+            ESPE += pet.ATK;
+            EATK += pet.SPE; 
 
             break;
         
         case 3:
             EnemyName = "incomplete mimic ";
-            EHP += Pet.SPE;
-            ESPE += Pet.HP ;
-            EATK += Pet.ATK; 
+            EHP += pet.SPE;
+            ESPE += pet.HP ;
+            EATK += pet.ATK; 
 
             break;
         
         case 4:
             EnemyName = "incomplete mimic ";
-            EHP += Pet.SPE;
-            ESPE += Pet.ATK;
-            EATK += Pet.HP; 
+            EHP +=  pet.SPE;
+            ESPE += pet.ATK;
+            EATK += pet.HP; 
 
             break;
         
         case 5:
             EnemyName = "incomplete mimic ";
-            EHP += Pet.ATK;
-            ESPE += Pet.HP;
-            EATK += Pet.SPE; 
+            EHP +=  pet.ATK;
+            ESPE += pet.HP;
+            EATK += pet.SPE; 
 
             break;
         
         case 6:
             EnemyName = "incomplete mimic ";
-            EHP += Pet.ATK;
-            ESPE += Pet.SPE;
-            EATK += Pet.HP; 
+            EHP += pet.ATK;
+            ESPE += pet.SPE;
+            EATK += pet.HP; 
 
             break;
         
@@ -88,15 +89,11 @@ public class Enemy : IStats
     Console.WriteLine("Attack " + EATK);
     }
 
-
-
-    void Cekeenemyalive()
+    public void InvokeTheEvent()
     {
-        if (EHP <= 0)
-        {
-            OnEnemyDeath.Invoke(this);
-        }
+        OnEnemyDeath.Invoke(this, pet);
     }
 
-    public event Action<Enemy> OnEnemyDeath;
+
+    public event Action<Enemy, Pet> OnEnemyDeath;
 }
