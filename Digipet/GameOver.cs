@@ -1,6 +1,6 @@
 ﻿namespace Digipet;
 
-public class CondisonOfPet
+public class GameOver
 {
     
 }

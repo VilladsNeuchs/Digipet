@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
 namespace Digipet;
-
+ 
 public class Enemy(Pet pet) : IStats
 {
     public string EnemyName;
@@ -87,6 +87,7 @@ public class Enemy(Pet pet) : IStats
     Console.WriteLine("Health " + EHP);
     Console.WriteLine("Speed " + ESPE);
     Console.WriteLine("Attack " + EATK);
+    Console.WriteLine(" " );
     }
 
     public void InvokeTheEvent()
